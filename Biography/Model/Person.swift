@@ -13,13 +13,14 @@ struct Person: Identifiable, Decodable {
     let description: String
     let imageName: String
     let shortDescription: String
+    let sections: [PersonSection]?
 }
 
 struct PersonSection: Identifiable, Decodable {
     
     var id: String { name }
     let name: String
-    let pictureImageName: [String]
+    let picturesImageName: [String]
 }
 
 extension Person: Equatable {
